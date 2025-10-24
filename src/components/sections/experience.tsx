@@ -4,84 +4,81 @@ import { Award, Code, Globe, CheckCircle } from "lucide-react"
 
 const stats = [
 	{
-		icon: Award,
-		title: "Nearly 10 Years",
-		description: "of Excellence",
-		gradient: "from-yellow-500 to-orange-500",
+		icon: Globe,
+		title: "Global Experience",
+		description: "3 Continents, Countless Lessons",
 		details: [
-			"Established in 2015",
-			"Continuous innovation",
-			"Industry expertise",
+			"Worked in Europe, Asia, North America",
+			"Startups to Fortune 500 companies",
+			"Small teams and large organizations",
 		],
 	},
 	{
 		icon: Code,
-		title: "Smart & Robust Code",
-		description: "Production-Ready",
-		gradient: "from-blue-500 to-cyan-500",
+		title: "Full-Stack Mastery",
+		description: "React to Rails, Golang to Java",
 		details: [
-			"Enterprise-grade quality",
-			"Scalable architecture",
-			"Best practices",
+			"Entire React ecosystem (Next.js, React Native)",
+			"Backend: Rails, Golang, Java",
+			"DevOps, databases, architecture",
 		],
 	},
 	{
-		icon: Globe,
-		title: "Trusted Worldwide",
-		description: "Global Reach",
-		gradient: "from-purple-500 to-pink-500",
+		icon: Award,
+		title: "Nearly a Decade",
+		description: "Still Learning Every Day",
 		details: [
-			"Global client base",
-			"Multi-industry experience",
-			"Long-term partnerships",
+			"Started in 2015, still shipping code",
+			"Led teams, shipped solo projects",
+			"From code to customer success",
 		],
 	},
 ]
 
 export function Experience() {
 	return (
-		<section className="py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
-			{/* Enhanced background decorations */}
-			<div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-300/40 rounded-full blur-3xl"></div>
-			<div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-3xl"></div>
+		<section className="py-32 bg-gray-50 relative overflow-hidden">
+			{/* Minimalist background decorations with more depth */}
+			<div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-br from-gray-300/30 to-gray-200/20 blur-3xl"></div>
+			<div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-gray-300/20 to-transparent blur-3xl"></div>
 
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-				{/* Streamlined Section Header */}
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+				{/* Section Header */}
 				<div className="text-center mb-20">
-					<div className="inline-block px-5 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full mb-8 shadow-lg">
-						<p className="text-sm font-bold tracking-wide">WHY CHOOSE US</p>
+					<div className="inline-block px-6 py-3 bg-black text-white mb-8 shadow-lg">
+						<p className="text-sm font-bold tracking-wider">MY JOURNEY</p>
 					</div>
-					<h2 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-						Built on Excellence,
-						<span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mt-2">
-							Driven by Results
+					<h2 className="text-5xl sm:text-6xl font-bold text-black mb-6 leading-tight">
+						A Decade of Building
+						<span className="block text-teal-500 mt-2 drop-shadow-sm">
+							Software That Matters
 						</span>
 					</h2>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-						Hundreds of successful projects delivered across industries worldwide.
+						I&apos;ve worn every hat—junior dev, senior engineer, tech lead, solo founder. I know what works because I&apos;ve lived it.
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto mb-16">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 					{stats.map((stat, index) => {
 						const Icon = stat.icon
 						return (
 							<div key={index} className="text-center group relative">
-								{/* Enhanced Card background */}
-								<div className="bg-white rounded-3xl p-10 shadow-lg border-2 border-gray-100 hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-3 hover:border-gray-200">
-									{/* Enhanced Icon with gradient background */}
+								{/* Shadow layer for depth */}
+								<div className="absolute inset-0 bg-black/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+
+								{/* Square card with layered shadow */}
+								<div className="relative bg-white p-10 border-2 border-gray-300 hover:border-teal-500 transition-all duration-300 group-hover:-translate-y-2 shadow-xl hover:shadow-2xl">
+									{/* Square icon container with depth */}
 									<div className="relative inline-block mb-8">
-										<div
-											className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-20 rounded-3xl blur-2xl group-hover:opacity-30 transition-opacity scale-150`}
-										></div>
-										<div
-											className={`relative inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br ${stat.gradient} text-white shadow-2xl`}
-										>
+										{/* Icon shadow layer */}
+										<div className="absolute inset-0 bg-black/10 translate-x-1 translate-y-1"></div>
+										<div className="relative inline-flex items-center justify-center w-24 h-24 bg-black text-white group-hover:bg-teal-500 group-hover:text-black transition-all duration-300 shadow-lg group-hover:shadow-xl">
 											<Icon className="h-12 w-12" />
 										</div>
 									</div>
 
-									<h3 className="text-3xl font-bold text-gray-900 mb-3">
+									<h3 className="text-3xl font-bold text-black mb-3">
 										{stat.title}
 									</h3>
 									<p className="text-xl text-gray-600 mb-6 font-medium">
@@ -93,41 +90,33 @@ export function Experience() {
 										{stat.details.map((detail, idx) => (
 											<li
 												key={idx}
-												className="flex items-start text-sm text-gray-700"
+												className="flex items-start text-sm text-gray-700 font-medium"
 											>
-												<CheckCircle className="h-5 w-5 mr-3 text-green-500 flex-shrink-0 mt-0.5" />
+												<CheckCircle className="h-5 w-5 mr-3 text-teal-500 flex-shrink-0 mt-0.5 drop-shadow-sm" />
 												<span>{detail}</span>
 											</li>
 										))}
 									</ul>
+
+									{/* Bottom accent with shadow */}
+									<div className="absolute bottom-0 left-0 right-0 h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left shadow-lg"></div>
 								</div>
 							</div>
 						)
 					})}
 				</div>
 
-				{/* Streamlined credibility section */}
-				<div className="max-w-5xl mx-auto bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 shadow-2xl text-white text-center">
-					<h3 className="text-3xl font-bold mb-6">
-						Ready to Build Something Amazing?
-					</h3>
-					<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-						Join hundreds of satisfied clients. From startups to enterprises, we
-						scale with your vision.
+				{/* Personal statement */}
+				<div className="mt-20 text-center">
+					<p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed">
+						<span className="font-bold text-black">Why work with a solo developer?</span> Direct communication, faster decisions, and deep expertise across the entire stack.
+						No handoffs, no miscommunication—just one experienced developer who owns your project from start to finish.
 					</p>
-					<div className="flex flex-wrap justify-center gap-8 text-center">
-						<div>
-							<div className="text-4xl font-bold text-blue-400 mb-2">100%</div>
-							<div className="text-gray-400">On-time Delivery</div>
-						</div>
-						<div>
-							<div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
-							<div className="text-gray-400">Support Available</div>
-						</div>
-						<div>
-							<div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-							<div className="text-gray-400">Technologies</div>
-						</div>
+					<div className="inline-flex items-center gap-2 px-5 py-3 bg-white border-2 border-gray-300 shadow-lg">
+						<CheckCircle className="h-5 w-5 text-teal-500" />
+						<span className="text-sm font-bold text-gray-700">
+							One developer. Full ownership. Real results.
+						</span>
 					</div>
 				</div>
 			</div>
